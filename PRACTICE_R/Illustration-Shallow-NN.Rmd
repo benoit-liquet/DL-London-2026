@@ -1,0 +1,97 @@
+---
+title: "Example Regression with NN"
+author: "Benoit and Sarat"
+date: "20/04/2023"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment=NA)
+```
+
+## Illustration Neural Network 
+
+A short illustration to run a shallow neural network using _neuralnet_ R package pusblished in **The R journal**:
+[neuralnet: Training of Neural Networks](https://datajobs.com/data-science-repo/Neural-Net-[Gunther-and-Fritsch].pdf)
+
+
+```{r}
+set.seed(500)
+library(MASS)
+data <- Boston
+any(is.na(Boston))
+```
+
+## Split the data and Run a linear model
+
+```{r pressure, echo=TRUE}
+index <- sample(1:nrow(data),round(0.75*nrow(data)))
+train <- data[index,]
+test <- data[-index,]
+lm.fit <- glm(medv~., data=train)
+summary(lm.fit)
+pr.lm <- predict(lm.fit,test)
+(MSE.lm <- sum((pr.lm - test$medv)^2)/nrow(test))
+```
+
+## A shallow Neural network
+
+```{r}
+library(neuralnet)
+maxs <- apply(data, 2, max) 
+mins <- apply(data, 2, min)
+
+scaled <- as.data.frame(scale(data, center = mins, scale = maxs - mins))
+
+train_ <- scaled[index,]
+test_ <- scaled[-index,]
+train_ <- scaled[index,]
+test_ <- scaled[-index,]
+n <- names(train_)
+f <- as.formula(paste("medv ~", paste(n[!n %in% "medv"], collapse = " + ")))
+lin <- function(x) x
+nn <- neuralnet(f,data=train_,hidden=3,linear.output=TRUE)
+plot(nn, rep="best")
+```
+
+## Performance
+
+```{r}
+pr.nn <- compute(nn,test_[,1:13])
+
+pr.nn_ <- pr.nn$net.result * (max(data$medv) - min(data$medv)) + min(data$medv)
+test.r <- (test_$medv) * (max(data$medv) - min(data$medv)) + min(data$medv)
+
+MSE.nn <- sum((test.r - pr.nn_)^2)/nrow(test_)
+(res <- c(MSE.lm,MSE.nn))
+```
+
+## Should we add some units ?
+
+```{r}
+nn8 <- neuralnet(f,data=train_,hidden=8,linear.output=TRUE)
+plot(nn8, rep="best")
+pr.nn <- compute(nn8,test_[,1:13])
+pr.nn_ <- pr.nn$net.result * (max(data$medv) - min(data$medv)) + min(data$medv)
+test.r <- (test_$medv) * (max(data$medv) - min(data$medv)) + min(data$medv)
+
+MSE.nn8 <- sum((test.r - pr.nn_)^2)/nrow(test_)
+res <- c(res,MSE.nn8)
+res
+```
+
+## Should we add a layer ?
+
+```{r}
+nn8.4 <- neuralnet(f,data=train_,hidden=c(8,4),linear.output=TRUE)
+plot(nn8.4, rep="best")
+pr.nn <- compute(nn8.4,test_[,1:13])
+pr.nn_ <- pr.nn$net.result * (max(data$medv) - min(data$medv)) + min(data$medv)
+test.r <- (test_$medv) * (max(data$medv) - min(data$medv)) + min(data$medv)
+
+MSE.nn8 <- sum((test.r - pr.nn_)^2)/nrow(test_)
+res <- c(res,MSE.nn8)
+res
+```

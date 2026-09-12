@@ -92,6 +92,39 @@ you. If a notebook asks for a GPU, use **Runtime → Change runtime type → GPU
 
 ---
 
+## A small network in R, with nothing to install
+
+Deep learning is usually written in Python, but a **small network on a small
+table** is perfectly at home in R. These four illustrations use the
+[`neuralnet`](https://cran.r-project.org/package=neuralnet) package, which is
+pure R: no Python, no reticulate, no TensorFlow.
+
+```r
+install.packages(c("neuralnet", "ggplot2", "MASS"))
+```
+
+| Illustration | What it shows | |
+|---|---|---|
+| **A shallow network** | Boston housing: a linear model, then 3 neurons, then 8, then two layers. Which one wins? | [read](https://benoit-liquet.github.io/DL-London-2026/PRACTICE_R/Illustration-Shallow-NN.html) · [source](PRACTICE_R/Illustration-Shallow-NN.Rmd) |
+| **Binary classification** | Breast cancer data: a logistic regression *is* a network with no hidden layer, then hidden layers are added and the parameters counted | [read](https://benoit-liquet.github.io/DL-London-2026/PRACTICE_R/Illustration-Binary-classification-task.html) · [source](PRACTICE_R/Illustration-Binary-classification-task.Rmd) |
+| **A non-linear boundary** | two interleaved spirals, which no linear model can separate | [read](https://benoit-liquet.github.io/DL-London-2026/PRACTICE_R/Illustration-Non-linear-bundary.html) · [source](PRACTICE_R/Illustration-Non-linear-bundary.Rmd) |
+| **Approximation ability** | how a network approaches an arbitrary function as units are added | [read](https://benoit-liquet.github.io/DL-London-2026/PRACTICE_R/Illustration_Approx_Ability.html) |
+
+The data file for the second one, `Breast_cancer.RData`, sits next to the
+sources in [PRACTICE_R](PRACTICE_R).
+
+**What this is, and what it is not.** `neuralnet` trains fully connected
+networks and nothing else: no convolutions, no sequence models, no mini-batches,
+no dropout. It is the right tool to see a network work on a few hundred rows,
+and the wrong one for anything in Parts 2 and 3 above. The last illustration is
+provided as a rendered page only, because its source relies on Keras for R.
+
+> Going further in R, outside this course: the
+> [torch](https://torch.mlverse.org/) package runs natively, without Python.
+> We do not use it here.
+
+---
+
 ## Going further
 
 The full three-day course on machine learning and deep learning is available in

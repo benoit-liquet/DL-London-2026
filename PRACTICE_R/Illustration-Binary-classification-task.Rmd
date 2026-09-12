@@ -1,0 +1,135 @@
+---
+title: "Binary Classification with NN"
+author: "Benoit and Sarat"
+date: "20/04/2023"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment=NA)
+```
+
+## Breast cancer Data
+
+```{r}
+load("Breast_cancer.RData")
+dim(Breast_cancer_data)
+data <- Breast_cancer_data[,-1]
+```
+
+
+
+## Split the data
+
+```{r}
+set.seed(101)
+indexes <- sample(1:569, 456 )
+train_data <- data[indexes, ]
+test_data <- data[-indexes, ]
+trainX <- train_data[, -1]
+trainY <- train_data[, 1]
+testX <- test_data[, -1]
+testY <- test_data[, 1]
+trainY <- ifelse(trainY == "B", 0, 1)
+testY <- ifelse(testY == "B", 0, 1)
+```
+
+## Neural Network as logistic model
+
+```{r}
+data.glm <- data.frame(Y=trainY,trainX)
+NN1 <- glm(Y~.,data=data.glm,family=binomial)
+```
+
+```{r}
+class.pred <- function(x){
+pred <- ifelse(x < 0.5, 0, 1)
+pred <- factor(pred,levels = c(0,1))
+return(pred)
+}
+```
+
+```{r}
+data.test <- data.frame(Y=testY,testX)
+data.train <- data.frame(Y=trainY,trainX)
+```
+
+- Train
+```{r}
+predt <- class.pred(predict(NN1,newdata =data.train ))
+table(Prediction=predt,Reality=trainY)
+```
+
+- Test
+```{r}
+pred <- class.pred(predict(NN1,newdata =data.test ))
+table(Prediction=pred,Reality=testY)
+```
+
+
+
+## Should we add a layer ?
+
+```{r}
+library(neuralnet)
+nn1 <- neuralnet(Y~.,data=data.glm,hidden=4,linear.output=FALSE)
+plot(nn1, rep="best")
+pr.nn <- compute(nn1,data.test)
+pred <- class.pred(pr.nn$net.result[,1])
+table(Prediction=pred,Reality=testY)
+```
+
+- Number of parameters
+```{r}
+length(unlist(nn1$weights))
+```
+
+
+## More neurons ?
+
+
+```{r,cache=TRUE}
+nn1 <- neuralnet(Y~.,data=data.glm,hidden=10,linear.output=FALSE)
+plot(nn1, rep="best")
+```
+
+- train data 
+
+```{r}
+pr.nn <- compute(nn1,data.train)
+pred.t <- class.pred(pr.nn$net.result[,1])
+table(Prediction=pred.t,Reality=trainY)
+```
+
+- test data
+
+```{r}
+pr.nn <- compute(nn1,data.test)
+pred <- class.pred(pr.nn$net.result[,1])
+table(Prediction=pred,Reality=testY)
+```
+
+- Number of parameters
+```{r}
+length(unlist(nn1$weights))
+```
+
+## Should we add a second  layer ?
+
+```{r}
+nn2 <- neuralnet(Y~.,data=data.glm,hidden=c(4,2),linear.output=FALSE)
+plot(nn2, rep="best")
+pr.nn <- compute(nn2,data.test)
+pred <- class.pred(pr.nn$net.result[,1])
+table(Prediction=pred,Reality=testY)
+```
+
+- Number of parameters
+```{r}
+length(unlist(nn2$weights))
+30*4+4+4*2+2+2*1+1
+```
+
+
