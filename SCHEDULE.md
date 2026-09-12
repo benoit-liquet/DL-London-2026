@@ -90,13 +90,20 @@ Mostly you press *Run*. Take the time to read `model.summary()` each time.
 We run together down to *Improve our model by tuning some parameters*, and note
 the test accuracy of the first model.
 
-**Then it is your turn.** A red panel in the notebook lists what to change, one
-thing at a time: the number of units, a third layer, another optimizer, the
-batch size, early stopping, batch normalisation, dropout. Try to beat the first
-result, and keep a note of what worked.
+Then the notebook shows **three options, one cell each**, that you run in turn:
 
-The rest of the notebook does the same sweep systematically, so run your own
-variants **before** reading the answer.
+1. **early stopping** — train as long as it helps, keep the best epoch
+2. **batch normalisation** — renormalise between the layers
+3. **dropout** — switch off a fraction of the units at each update
+
+**Then it is your turn:** copy one of those cells, combine whatever you like —
+width, depth, the three options, the optimizer, the batch size — and try to beat
+the first result. Keep a note of what you try.
+
+> **The same notebook in PyTorch.** If you would rather read this in PyTorch,
+> [MNIST_dense_network](https://colab.research.google.com/drive/1EnJQCGgETQZcV7-FPwBT5dfR86YQEMSM)
+> is the same model written with the other library, as a guided tour with its
+> own exercises. We do not run it in the session: pick the one you prefer.
 
 ---
 
@@ -147,6 +154,7 @@ hundred images rather than a million.
 |---|---|---|
 | **RNN Practice 1** | RNN and LSTM on a synthetic time series | [open in Colab](https://colab.research.google.com/drive/1VMNmL1YKZHZBJip8f5tcEMxj5VlCIfbM) |
 | **RNN Practice 4** | classification of ECG signals | [open in Colab](https://colab.research.google.com/drive/10sCO57yzS2env2RHSFH5eO2NwCxv6VL2) |
+| **RNN Practice 5** | classification of symptoms with a small language model — a proof of concept | [open in Colab](https://colab.research.google.com/drive/1agCKQMWCrs85yciGEMWQQTnWEBzF_9IF) |
 
 ---
 
@@ -160,7 +168,6 @@ These run exactly as they are, at home, with a GPU runtime:
 | CNN Practice 2 | CIFAR-10, in PyTorch *and* in Keras | [open](https://colab.research.google.com/drive/1Ru1wRki8yUxx5W2G4Of5-drTRtsZ3_Ym) |
 | RNN Practice 2 | sentiment on IMDb, with RNN and LSTM | [open](https://colab.research.google.com/drive/1MnvITjntB9AmHL2BN_03hGQcDxNVom4B) |
 | RNN Practice 3 | the same, with a transformer | [open](https://colab.research.google.com/drive/10HN5da584vuDld6Go9QceNIyGRfrsKCg) |
-| RNN Practice 5 | classification of symptoms | [open](https://colab.research.google.com/drive/1agCKQMWCrs85yciGEMWQQTnWEBzF_9IF) |
 
 ---
 
@@ -171,8 +178,10 @@ These run exactly as they are, at home, with a GPU runtime:
 
 | | |
 |---|---|
-| Solution, CNN Practice 2 | [open in Colab](https://colab.research.google.com/drive/1fhdo9d2UE5EsVppW2-s6yQngvFiwYGIg) |
-| Solution, CNN Practice 3 | [open in Colab](https://colab.research.google.com/drive/1wZ_LJTmoCfJ4Ca7B38Hd7TnwuitBMAKV) |
+| **Practice 4** — a systematic comparison, in Keras | [open in Colab](https://colab.research.google.com/github/benoit-liquet/DL-London-2026/blob/main/notebooks/DNN_Practice_4_Solution_Keras.ipynb) |
+| **MNIST dense network** — the same exercises, in PyTorch | [open in Colab](https://colab.research.google.com/github/benoit-liquet/DL-London-2026/blob/main/notebooks/MNIST_dense_network_Solution_PyTorch.ipynb) |
+| CNN Practice 2 | [open in Colab](https://colab.research.google.com/drive/1fhdo9d2UE5EsVppW2-s6yQngvFiwYGIg) |
+| CNN Practice 3 | [open in Colab](https://colab.research.google.com/drive/1wZ_LJTmoCfJ4Ca7B38Hd7TnwuitBMAKV) |
 
 </details>
 
