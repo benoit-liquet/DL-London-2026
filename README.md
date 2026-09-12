@@ -68,9 +68,7 @@ you. If a notebook asks for a GPU, use **Runtime → Change runtime type → GPU
 | | Notebook |
 |---|---|
 | 1 | [Practice 1](https://colab.research.google.com/drive/1GDdmVTk_Y_SUKvDrVWPf8CKj-M6r0NyG) |
-| 2 | [Practice 2](https://colab.research.google.com/drive/1gpr8Xl5Y51-dYDQ1BA6lNcJ8yZq3GPvr) |
-| 3 | [Practice 3](https://colab.research.google.com/drive/12PETdpB2B0Y2mTGzYUQ8X6M0GxRo4cQN) |
-| 4 | [Practice 4](https://colab.research.google.com/drive/1Msg2GDt5P0kB0MVPSPUcGZGIxDjOgoDb?usp=sharing) |
+| 2 | [Practice 4](https://colab.research.google.com/drive/1Msg2GDt5P0kB0MVPSPUcGZGIxDjOgoDb?usp=sharing) |
 
 ### Part 2 — Convolutional Neural Networks
 
@@ -129,7 +127,7 @@ Chapters of *Mathematical Engineering of Deep Learning*, in the MLDL repository:
 
 [chap1](https://github.com/benoit-liquet/MLDL/blob/main/chap1.pdf) ·
 [chap2](https://github.com/benoit-liquet/MLDL/blob/main/chap2.pdf) ·
-[chap3](https://github.com/benoit-liquet/MLDL/blob/main/chap3.pdf) ·
+[chap3 (zip)](https://github.com/benoit-liquet/MLDL/blob/main/chap3.pdf.zip) ·
 [chap4](https://github.com/benoit-liquet/MLDL/blob/main/chap4.pdf) ·
 [chap5](https://github.com/benoit-liquet/MLDL/blob/main/chap5.pdf) ·
 [chap6](https://github.com/benoit-liquet/MLDL/blob/main/chap6.pdf) ·
