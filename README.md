@@ -1,11 +1,26 @@
 # Deep Learning — Exposome Analytics Summer School, London 2026
 
-Material for the **Deep Learning** day of the [Exposome Analytics Summer
-School](https://www.imperial.ac.uk/school-public-health/), Imperial School of
-Public Health, London, 14–18 September 2026.
+Material for the **Deep Learning** day of the Exposome Analytics Summer School,
+Imperial School of Public Health, London, 14–18 September 2026.
+
+> Course page:
+> [Exposome Analytics: from Causal Models to AI](https://www.imperial.ac.uk/school-public-health/study/short-courses/exposome-analytics-from-causal-models-to-ai/)
 
 **Thursday 17 September — Prof. Benoit Liquet**
 LMAP, Université de Pau et des Pays de l'Adour
+
+---
+
+## How to get the material
+
+The simplest way is to take everything at once:
+
+> Click the green **`< > Code`** button at the top of this page, then
+> **Download ZIP**. Unzip it, and you have the slides and this page on your
+> machine.
+
+You can also open any single file above and use its own download button.
+The **tutorials are not in the ZIP**: they run online, see below.
 
 ---
 
@@ -30,8 +45,23 @@ LMAP, Université de Pau et des Pays de l'Adour
 
 ## Tutorials
 
-All practicals run in **Google Colab**: no installation, only a Google account.
-Open a notebook, then use *File → Save a copy in Drive* to keep your own version.
+All practicals run in **Google Colab**. Nothing to install: a browser and a
+Google account are enough.
+
+### Before you start — please follow this procedure
+
+The notebooks below are **shared, read-only** copies. If you type in them
+directly, your work is not saved. Make your own copy first:
+
+1. **Click** the link of the notebook. It opens in Google Colab.
+2. **Sign in** with your Google account, top right.
+3. In the menu, choose **File → Save a copy in Drive**.
+4. A new tab opens, titled *Copy of ...* — **this is your copy**. Work in that
+   one. It is saved automatically in your Drive, and you can come back to it
+   after the school.
+
+The first cell may take a minute to start: Colab is allocating a machine for
+you. If a notebook asks for a GPU, use **Runtime → Change runtime type → GPU**.
 
 ### Part 1 — Deep Neural Networks
 
@@ -66,14 +96,15 @@ Open a notebook, then use *File → Save a copy in Drive* to keep your own versi
 
 ## Going further
 
-The full three-day course on machine learning and deep learning, given in June
-2025, is available in a separate repository:
+The full three-day course on machine learning and deep learning is available in
+a separate repository:
 
 **[benoit-liquet/MLDL](https://github.com/benoit-liquet/MLDL)**
 
-In particular, the
-**[DeepLearning](https://github.com/benoit-liquet/MLDL/tree/main/DeepLearning)**
-folder contains the complete lecture notes and the course notebooks:
+### Lecture notes and course notebooks
+
+The [DeepLearning](https://github.com/benoit-liquet/MLDL/tree/main/DeepLearning)
+folder contains, for each topic, the lecture slides and the full course notebook:
 
 | | |
 |---|---|
@@ -82,8 +113,27 @@ folder contains the complete lecture notes and the course notebooks:
 | Sequence Models | [lecture (PDF)](https://github.com/benoit-liquet/MLDL/blob/main/DeepLearning/Lecture_RNN_2025.pdf) · [notebook](https://github.com/benoit-liquet/MLDL/blob/main/DeepLearning/Deep_learning_RNN_2025_new.nb.html.zip) |
 
 The [MachineLearning](https://github.com/benoit-liquet/MLDL/tree/main/MachineLearning)
-folder covers supervised learning, and [DATA](https://github.com/benoit-liquet/MLDL/tree/main/DATA)
-holds the datasets used in the practicals.
+folder covers supervised learning, and
+[DATA](https://github.com/benoit-liquet/MLDL/tree/main/DATA) holds the datasets
+used in the practicals.
+
+### The mathematical background
+
+If you want to revise the mathematics before the day, start here:
+
+> **[Navigating Mathematical Basics: A Primer for Deep Learning in Science](https://github.com/benoit-liquet/MLDL/blob/main/deep_learning_math_background.pdf)**
+
+### Book chapters
+
+Chapters of *Mathematical Engineering of Deep Learning*, in the MLDL repository:
+
+[chap1](https://github.com/benoit-liquet/MLDL/blob/main/chap1.pdf) ·
+[chap2](https://github.com/benoit-liquet/MLDL/blob/main/chap2.pdf) ·
+[chap3](https://github.com/benoit-liquet/MLDL/blob/main/chap3.pdf) ·
+[chap4](https://github.com/benoit-liquet/MLDL/blob/main/chap4.pdf) ·
+[chap5](https://github.com/benoit-liquet/MLDL/blob/main/chap5.pdf) ·
+[chap6](https://github.com/benoit-liquet/MLDL/blob/main/chap6.pdf) ·
+[chap7](https://github.com/benoit-liquet/MLDL/blob/main/chap7.pdf)
 
 ---
 
@@ -94,9 +144,6 @@ The material is based on:
 > Liquet, B., Moka, S., Nazarathy, Y. (2024).
 > *Mathematical Engineering of Deep Learning*, 1st edition.
 > Available online: [deeplearningmath.org](https://deeplearningmath.org)
-
-and on the book chapter *Navigating Mathematical Basics: A Primer for Deep
-Learning in Science* by the same authors.
 
 ---
 
