@@ -65,10 +65,12 @@ you. If a notebook asks for a GPU, use **Runtime → Change runtime type → GPU
 
 ### Part 1 — Deep Neural Networks
 
-| | Notebook |
-|---|---|
-| 1 | [Practice 1](https://colab.research.google.com/drive/1GDdmVTk_Y_SUKvDrVWPf8CKj-M6r0NyG) |
-| 2 | [Practice 4](https://colab.research.google.com/drive/1Msg2GDt5P0kB0MVPSPUcGZGIxDjOgoDb?usp=sharing) |
+| | Notebook | |
+|---|---|---|
+| 1 | **Practice 1** — a first network on a table of data | [open in Colab](https://colab.research.google.com/github/benoit-liquet/DL-London-2026/blob/main/notebooks/DNN_Practice_1_London.ipynb) |
+| 2 | **Practice 4** — MNIST, and the effect of model size | [open in Colab](https://colab.research.google.com/github/benoit-liquet/DL-London-2026/blob/main/notebooks/DNN_Practice_4_London.ipynb) |
+| | *Practice 2* (not covered today) | [open in Colab](https://colab.research.google.com/drive/1gpr8Xl5Y51-dYDQ1BA6lNcJ8yZq3GPvr) |
+| | *Practice 3* (not covered today) | [open in Colab](https://colab.research.google.com/drive/12PETdpB2B0Y2mTGzYUQ8X6M0GxRo4cQN) |
 
 ### Part 2 — Convolutional Neural Networks
 
