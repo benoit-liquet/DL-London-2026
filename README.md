@@ -30,7 +30,7 @@ The **tutorials are not in the ZIP**: they run online, see below.
 |---|---|
 | **Overview of Deep Learning** | what the models are, and the mathematics behind them |
 | **Key Algorithms** | fully connected networks, convolutional networks, sequence models, attention, transformers |
-| **Tutorial** | real-world applications, hands-on in Google Colab |
+| **Tutorial** | real-world applications, hands-on in Google Colab — [schedule](SCHEDULE.md) |
 
 ---
 
@@ -45,52 +45,17 @@ The **tutorials are not in the ZIP**: they run online, see below.
 
 ## Tutorials
 
-All practicals run in **Google Colab**. Nothing to install: a browser and a
-Google account are enough.
+The afternoon is hands-on, in **Google Colab**: nothing to install, a browser
+and a Google account are enough.
 
-### Before you start — please follow this procedure
+> ### **[→ Schedule and notebooks for the afternoon](SCHEDULE.md)**
+>
+> The running order, the timing, and every notebook link are on that page.
 
-The notebooks below are **shared, read-only** copies. If you type in them
-directly, your work is not saved. Make your own copy first:
-
-1. **Click** the link of the notebook. It opens in Google Colab.
-2. **Sign in** with your Google account, top right.
-3. In the menu, choose **File → Save a copy in Drive**.
-4. A new tab opens, titled *Copy of ...* — **this is your copy**. Work in that
-   one. It is saved automatically in your Drive, and you can come back to it
-   after the school.
-
-The first cell may take a minute to start: Colab is allocating a machine for
-you. If a notebook asks for a GPU, use **Runtime → Change runtime type → GPU**.
-
-### Part 1 — Deep Neural Networks
-
-| | Notebook | |
-|---|---|---|
-| 1 | **Practice 1** — a first network on a table of data | [open in Colab](https://colab.research.google.com/github/benoit-liquet/DL-London-2026/blob/main/notebooks/DNN_Practice_1_London.ipynb) |
-| 2 | **Practice 4** — MNIST, and the effect of model size | [open in Colab](https://colab.research.google.com/github/benoit-liquet/DL-London-2026/blob/main/notebooks/DNN_Practice_4_London.ipynb) |
-| | *Practice 2* (not covered today) | [open in Colab](https://colab.research.google.com/drive/1gpr8Xl5Y51-dYDQ1BA6lNcJ8yZq3GPvr) |
-| | *Practice 3* (not covered today) | [open in Colab](https://colab.research.google.com/drive/12PETdpB2B0Y2mTGzYUQ8X6M0GxRo4cQN) |
-
-### Part 2 — Convolutional Neural Networks
-
-| | Notebook |
-|---|---|
-| 1 | [Practice 1](https://colab.research.google.com/drive/1dtH3UHSfbK5Ss9E9ogtYG5YQzc5fTXNE) |
-| 2 | [Practice 2](https://colab.research.google.com/drive/1Ru1wRki8yUxx5W2G4Of5-drTRtsZ3_Ym) |
-| 3 | [Practice 3 — MNIST](https://colab.research.google.com/drive/1Foo-KTWMiJV-sl0mRaZnWHnk05VQLyUB) |
-| 4 | [Practice 4 — medMNIST](https://colab.research.google.com/drive/1kmTZ-ypepEpcfNZB_qIB8ILK201KhkEp) |
-| 5 | [Practice 5 — Transfer Learning](https://colab.research.google.com/drive/1EEevV5WUsRwmALZDxTl57Ol5nT89ylbd) |
-
-### Part 3 — Sequence Models
-
-| | Notebook |
-|---|---|
-| 1 | [Practice 1](https://colab.research.google.com/drive/1VMNmL1YKZHZBJip8f5tcEMxj5VlCIfbM) |
-| 2 | [Practice 2](https://colab.research.google.com/drive/1MnvITjntB9AmHL2BN_03hGQcDxNVom4B) |
-| 3 | [Practice 3](https://colab.research.google.com/drive/10HN5da584vuDld6Go9QceNIyGRfrsKCg) |
-| 4 | [Practice 4 — ECG classification](https://colab.research.google.com/drive/10sCO57yzS2env2RHSFH5eO2NwCxv6VL2) |
-| 5 | [Practice 5 — Symptoms classification](https://colab.research.google.com/drive/1agCKQMWCrs85yciGEMWQQTnWEBzF_9IF) |
+**One thing to do first, for each notebook:** they open as shared, read-only
+copies. Choose **File → Save a copy in Drive** and work in *your* copy,
+otherwise nothing you type is kept. If a notebook asks for a GPU, use
+**Runtime → Change runtime type → T4 GPU**.
 
 ---
 
